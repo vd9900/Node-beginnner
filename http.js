@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
     }
 });
 server.on("connection", (socket) => {
-    console.log("New connection request");
+    console.log("New connection request...");
 })
 server.listen(5555)
 
