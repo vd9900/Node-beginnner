@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
         res.end();
     }
     if (req.url === "/login") {
-        res.write("Enter your name and password in query parmerter")
+        res.write("Enter your id and password in query parmerter")
         res.end();
     }
 });
