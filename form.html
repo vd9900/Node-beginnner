@@ -1,0 +1,60 @@
+<!-- MAKEING POST RESQUEST TO SERVER BY js -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>CONTACT</h1>
+        <form action="" method="post">
+            <label for="name">Username</label>
+            <input type="text" name="name">
+            <br>
+            <br>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" name="email">
+            <br>
+            <br>
+            <br>
+            <label for="password">Password</label>
+            <input type="password" name="password">
+            <br>
+            <br>
+            <br>
+            <input type="submit" value="submit" id="btn">
+        </form>
+    </div>
+</body>
+<script>
+    const name = document.querySelector("input[name=name]")
+    const email = document.querySelector("input[name=email]")
+    const password = document.querySelector("input[name=password]")
+    document.querySelector("#btn").addEventListener("click", (e) => {
+        const data = {
+            name: name.value,
+            email: email.value,
+            password: password.value
+        }
+
+        fetch("http://localhost:2222/form",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            }
+        )
+    })
+
+ </script>
+
+</html>
+ 
