@@ -14,7 +14,6 @@ app.get("/help",(req,res)=>{
 app.post("/form",(req,res)=>{
     console.log(req.body.email);
     console.log(req.body.name);
-    // console.log(req.body)
     res.send("data received!")
 })
 app.get("/",(req,res)=>{
