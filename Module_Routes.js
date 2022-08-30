@@ -9,7 +9,7 @@ app.get("/home",(req,res)=>{
     res.send("hello")
 })   
 app.get("/help",(req,res)=>{
-    res.send("this help page")
+    res.send("This help page")
 })
 app.post("/form",(req,res)=>{
     console.log(req.body.email);
