@@ -6,7 +6,6 @@ const fs =  require("fs")
 const app  = experss();
 app.use(bodyparser.json())
 app.get("/land",(req,res)=>{
-    console.log("home page showed")
     res.send("hello")
 })   
 app.get("/help",(req,res)=>{
