@@ -5,7 +5,7 @@ const bodyparser = require("body-parser")
 const fs =  require("fs")
 const app  = experss();
 app.use(bodyparser.json())
-app.get("/home",(req,res)=>{
+app.get("/land",(req,res)=>{
     res.send("hello")
 })   
 app.get("/help",(req,res)=>{
