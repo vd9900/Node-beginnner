@@ -41,8 +41,8 @@ UserRouter.route("/addUser").post(userAddPOST)
 
 
 // all function which doing deffernt type of methods
-// GET method
 
+// GET method
 function userGET(req, res) {
     res.send("Hello this home page of user")
 }
