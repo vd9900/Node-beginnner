@@ -33,13 +33,13 @@ UserRouter.route("/").get(userGET)
 UserRouter.route("/allusers").get(allUsersGET)
 
 // get user by name
-UserRouter.route("/:id").get(userByIdGET)
+UserRouter.route("/user/:name").get(userByIdGET)
 
 // add user to server
 UserRouter.route("/addUser").post(userAddPOST)
 
 
-
+app.listen(4444)
 // all function which doing deffernt type of methods
 
 // GET method
@@ -54,8 +54,9 @@ function allUsersGET(req,res){
 
 function userByIdGET(req,res){
     Users.forEach((user)=>{
-        if(user.id == req.params.id){
+        if(user.name == req.params.name){
             res.send(user)
+            console.log(user);
         }else{
             res.send("User not Founded")
         }
