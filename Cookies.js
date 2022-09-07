@@ -8,7 +8,7 @@ const Router = express.Router();
 const user = {
     user :"vinith"
 }
-
+app.use(cookiesparser)
 app.use("/",Router)
 
 Router.route("/home").get(homeGET)
