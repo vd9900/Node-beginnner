@@ -4,7 +4,7 @@ const app = express()
 
 const Router = express.Router();
 
-//user object 
+//user  
 const user = {
     user :"vinith"
 }
